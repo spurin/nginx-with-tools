@@ -1,6 +1,6 @@
-# Nginx With Tools Docker Image
+# Nginx With Tools - Container Image
 
-This Docker image is based on the official Nginx image and includes additional tools useful for network troubleshooting and web requests.
+This container image is based on the official Nginx image and includes additional tools useful for network troubleshooting and web requests.
 
 ## Included Tools
 
