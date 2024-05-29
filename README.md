@@ -1,6 +1,6 @@
 # Nginx With Tools - Container Image
 
-This container image is based on the official Nginx image and includes additional tools useful for network troubleshooting and web requests.
+This container image is based on the official Nginx image and includes additional tools useful for network troubleshooting and web requests. The image can also be conveniently run on multiple ports using an environment variable at runtime.
 
 ## Included Tools
 
@@ -13,6 +13,28 @@ This container image is based on the official Nginx image and includes additiona
 - `socat`: A more complex multi-purpose relay which can be used for bidirectional data transfer. It supports multiple transport protocols including TCP and UDP
 - `mtr`: Network diagnostic tool that combines ping and traceroute capabilities in one tool.
 - `bind9-host`: Provides DNS utilities like `host` and `nsupdate` for DNS troubleshooting.
+- `lsof`: A utility to list open files. It is used to determine which files are open by which process.
+- `ps`: Displays information about a selection of the active processes. It is useful for monitoring the current processes.
+- `ncat`: A versatile networking utility which can read and write data across networks from the command line, using TCP or UDP protocol.
+- `nmap`: Network Mapper, a utility for network discovery and security auditing.
+
+## Multiple Ports
+
+By default, the environment variable `LISTEN_PORTS` is set to 80. Running this with comma seperated values will configure nginx to listen on different ports on startup.
+
+## Example Usage
+
+### Docker
+
+```bash
+docker run -e LISTEN_PORTS=80,8080 spurin/nginx-with-tools
+```
+
+### Kubernetes
+
+```bash
+kubectl run nginx-with-tools --image=spurin/nginx-with-tools --env="LISTEN_PORTS=80,8080"
+```
 
 ## Container Image
 

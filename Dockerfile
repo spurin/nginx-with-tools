@@ -11,5 +11,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     socat \
     mtr \
     bind9-host \
+    lsof \
+    procps \
+    ncat \
+    nmap \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# Set environment variable for ports
+ENV LISTEN_PORTS=80
+
+# Copy the entrypoint script
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Set the entrypoint to the custom script
+ENTRYPOINT ["/entrypoint.sh"]
+
+# Command to start NGINX
+CMD ["nginx", "-g", "daemon off;"]
