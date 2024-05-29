@@ -4,19 +4,19 @@ This container image is based on the official Nginx image and includes additiona
 
 ## Included Tools
 
-- `ping`: Used to check the reachability of a host on an IP network
-- `nslookup`: For querying the DNS to obtain domain name or IP address mapping
-- `dig`: DNS lookup utility
-- `tcpdump`: Command-line packet analyzer
-- `curl`: Tool to transfer data with URLs from or to a server
-- `netcat` (nc): A simple Unix utility which reads and writes data across network connections, using TCP or UDP protocol. Useful for creating sockets and listening on them
-- `socat`: A more complex multi-purpose relay which can be used for bidirectional data transfer. It supports multiple transport protocols including TCP and UDP
-- `mtr`: Network diagnostic tool that combines ping and traceroute capabilities in one tool.
 - `bind9-host`: Provides DNS utilities like `host` and `nsupdate` for DNS troubleshooting.
+- `curl`: Tool to transfer data with URLs from or to a server.
+- `dig`: DNS lookup utility.
 - `lsof`: A utility to list open files. It is used to determine which files are open by which process.
-- `ps`: Displays information about a selection of the active processes. It is useful for monitoring the current processes.
+- `mtr`: Network diagnostic tool that combines ping and traceroute capabilities in one tool.
 - `ncat`: A versatile networking utility which can read and write data across networks from the command line, using TCP or UDP protocol.
+- `netcat` (nc): A simple Unix utility which reads and writes data across network connections, using TCP or UDP protocol. Useful for creating sockets and listening on them.
 - `nmap`: Network Mapper, a utility for network discovery and security auditing.
+- `nslookup`: For querying the DNS to obtain domain name or IP address mapping.
+- `ping`: Used to check the reachability of a host on an IP network.
+- `ps`: Displays information about a selection of the active processes. It is useful for monitoring the current processes.
+- `socat`: A more complex multi-purpose relay which can be used for bidirectional data transfer. It supports multiple transport protocols including TCP and UDP.
+- `tcpdump`: Command-line packet analyzer.
 
 ## Multiple Ports
 
